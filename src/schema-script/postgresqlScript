@@ -69,10 +69,10 @@ CREATE TABLE Persistent_Logins (
 
 --------------------------------------
 
-insert into App_User (USER_ID, USER_NAME, ENCRYTED_PASSWORD, IS_ACTIVE)
+insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
 values (2, 'dbuser1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
 
-insert into App_User (USER_ID, USER_NAME, ENCRYTED_PASSWORD, IS_ACTIVE)
+insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
 values (1, 'dbadmin1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
 
 ---
