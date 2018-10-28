@@ -59,6 +59,87 @@ public class MainController {
         return "userInfoPage";
     }
 
+    @RequestMapping(value = "/billing", method = RequestMethod.GET)
+    public String billingPage(Model model, Principal principal) {
+
+        // After user login successfully.
+        String userName = principal.getName();
+
+        System.out.println("User Name: " + userName);
+
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+
+        String userInfo = WebUtils.toString(loginedUser);
+        model.addAttribute("userInfo", userInfo);
+
+        return "billingPage";
+    }
+
+    @RequestMapping(value = "/dataProcessing", method = RequestMethod.GET)
+    public String dataProcessingPage(Model model, Principal principal) {
+
+        // After user login successfully.
+        String userName = principal.getName();
+
+        System.out.println("User Name: " + userName);
+
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+
+        String userInfo = WebUtils.toString(loginedUser);
+        model.addAttribute("userInfo", userInfo);
+
+        return "dataProcessingPage";
+    }
+
+    @RequestMapping(value = "/fileTransfer", method = RequestMethod.GET)
+    public String fileTransferPage(Model model, Principal principal) {
+
+        // After user login successfully.
+        String userName = principal.getName();
+
+        System.out.println("User Name: " + userName);
+
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+
+        String userInfo = WebUtils.toString(loginedUser);
+        model.addAttribute("userInfo", userInfo);
+
+        return "fileTransferPage";
+    }
+
+    @RequestMapping(value = "/manager", method = RequestMethod.GET)
+    public String managerPage(Model model, Principal principal) {
+
+        // After user login successfully.
+        String userName = principal.getName();
+
+        System.out.println("User Name: " + userName);
+
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+
+        String userInfo = WebUtils.toString(loginedUser);
+        model.addAttribute("userInfo", userInfo);
+
+        return "managerPage";
+    }
+
+    @RequestMapping(value = "/programmer", method = RequestMethod.GET)
+    public String programmerPage(Model model, Principal principal) {
+
+        // After user login successfully.
+        String userName = principal.getName();
+
+        System.out.println("User Name: " + userName);
+
+        User loginedUser = (User) ((Authentication) principal).getPrincipal();
+
+        String userInfo = WebUtils.toString(loginedUser);
+        model.addAttribute("userInfo", userInfo);
+
+        return "programmerPage";
+    }
+
+
     @RequestMapping(value = "/403", method = RequestMethod.GET)
     public String accessDenied(Model model, Principal principal) {
 

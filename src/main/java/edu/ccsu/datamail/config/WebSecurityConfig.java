@@ -58,6 +58,29 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // If no login, it will redirect to /login page.
         http.authorizeRequests().antMatchers("/userInfo").access("hasAnyRole('ROLE_USER', 'ROLE_ADMIN')");
 
+        // /billing page requires login as ROLE_Billing or ROLE_ADMIN.
+        // If no login, it will redirect to /login page.
+        http.authorizeRequests().antMatchers("/billing").access("hasAnyRole('ROLE_Billing', 'ROLE_ADMIN')");
+
+        // /data processing page requires login as ROLE_Data_Processing or ROLE_ADMIN.
+        // If no login, it will redirect to /login page.
+        http.authorizeRequests().antMatchers("/dataProcessing").access("hasAnyRole('ROLE_Data_Processing', 'ROLE_ADMIN')");
+
+        // /file transfer page requires login as ROLE_File_Transfer or ROLE_ADMIN.
+        // If no login, it will redirect to /login page.
+        http.authorizeRequests().antMatchers("/fileTransfer").access("hasAnyRole('ROLE_File_Transfer', 'ROLE_ADMIN')");
+
+        // /manager page requires login as ROLE_Manager or ROLE_ADMIN.
+        // If no login, it will redirect to /login page.
+        http.authorizeRequests().antMatchers("/manager").access("hasAnyRole('ROLE_Manager', 'ROLE_ADMIN')");
+
+        // /production programmer page requires login as ROLE_Programmer or ROLE_ADMIN.
+        // If no login, it will redirect to /login page.
+        http.authorizeRequests().antMatchers("/programmer").access("hasAnyRole('ROLE_Production_Programmer', 'ROLE_ADMIN')");
+
+
+
+
         // For ADMIN only.
         http.authorizeRequests().antMatchers("/admin").access("hasRole('ROLE_ADMIN')");
 

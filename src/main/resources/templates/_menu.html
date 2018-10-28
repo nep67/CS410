@@ -13,6 +13,26 @@
 
     | &nbsp;
 
+    <a th:href="@{/billing}">Billing</a>
+
+    | &nbsp;
+
+    <a th:href="@{/dataProcessing}">Data Processing</a>
+
+    | &nbsp;
+
+    <a th:href="@{/fileTransfer}">File Transfer</a>
+
+    | &nbsp;
+
+    <a th:href="@{/manager}">Manager</a>
+
+    | &nbsp;
+
+    <a th:href="@{/programmer}">Production Programmer</a>
+
+    | &nbsp;
+
     <a th:if="${#request.userPrincipal != null}" th:href="@{/logout}">Logout</a>
 
 </div>

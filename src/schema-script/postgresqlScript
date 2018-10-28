@@ -68,6 +68,20 @@ CREATE TABLE Persistent_Logins (
 );
 
 --------------------------------------
+insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
+values (7, 'Manager1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
+
+insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
+values (6, 'Billing1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
+
+insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
+values (5, 'DataProcessing1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
+
+insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
+values (4, 'FileTransfer1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
+
+insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
+values (3, 'Programmer1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
 
 insert into App_User (USER_ID, USER_NAME, encrypted_password, IS_ACTIVE)
 values (2, 'dbuser1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.TCrFu', TRUE);
@@ -77,11 +91,29 @@ values (1, 'dbadmin1', '$2a$10$PrI5Gk9L.tSZiW9FXhTS8O8Mz9E97k2FZbFvGFFaSsiTUIl.T
 
 ---
 
+
+
 insert into app_role (ROLE_ID, ROLE_NAME)
 values (1, 'ROLE_ADMIN');
 
 insert into app_role (ROLE_ID, ROLE_NAME)
 values (2, 'ROLE_USER');
+
+insert into app_role (ROLE_ID, ROLE_NAME)
+values (3, 'ROLE_Production_Programmer');
+
+insert into app_role (ROLE_ID, ROLE_NAME)
+values (4, 'ROLE_File_Transfer');
+
+insert into app_role (ROLE_ID, ROLE_NAME)
+values (5, 'ROLE_Data_Processing');
+
+insert into app_role (ROLE_ID, ROLE_NAME)
+values (6, 'ROLE_Billing');
+
+insert into app_role (ROLE_ID, ROLE_NAME)
+values (7, 'ROLE_Manager');
+
 
 ---
 
@@ -93,5 +125,20 @@ values (2, 1, 2);
 
 insert into user_role (ID, USER_ID, ROLE_ID)
 values (3, 2, 2);
+
+insert into user_role (ID, USER_ID, ROLE_ID)
+values (4, 3, 3);
+
+insert into user_role (ID, USER_ID, ROLE_ID)
+values (5, 4, 4);
+
+insert into user_role (ID, USER_ID, ROLE_ID)
+values (6, 5, 5);
+
+insert into user_role (ID, USER_ID, ROLE_ID)
+values (7, 6, 6);
+
+insert into user_role (ID, USER_ID, ROLE_ID)
+values (8, 7, 7);
 ---
 Commit;
